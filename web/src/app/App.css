@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Barcode+39&family=Libre+Barcode+39+Text&family=Oi&display=swap');
+
+.libre-barcode-39 {
+  font-family: "Libre Barcode 39 Text", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.nui-wrapper {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.popup-thing {
+  background: hsl(var(--card));
+  border-radius: 0.5rem;
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(var(--card-foreground));
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.pattern-background {
+  overflow: hidden;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+  mask-size: 150% 150%;
+  -webkit-mask-size: 120% 150%;
+  
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.pattern-background::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  transform: rotate(45deg);
+  transform-origin: center;
+  background-color: #000000;
+  opacity: 0.4;
+  background-image: linear-gradient(#ffffff 1.3px, transparent 1.3px), linear-gradient(to right, #ffffff 1.3px, #43374c 1.3px);
+  background-size: 26px 26px;
+}
